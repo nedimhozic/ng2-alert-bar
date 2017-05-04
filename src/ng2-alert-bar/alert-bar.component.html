@@ -1,0 +1,6 @@
+<div [ngStyle]="getContainerStyle()" class="alert-bar-container">
+    <div id="alert_item_{{items.indexOf(item, 0)}}" *ngFor="let item of items" [ngStyle]="getItemStyles(item)" class="ng2-alert-bar alert-animation" (click)="tapClose($event, item)">
+        <span #close [hidden]="!options.showClose" class="close-alert" (click)="closeAlert($event, item)">x</span>
+        <span #text [ngStyle]="getTextStyle()" class="content-text"><strong>{{item.title}}</strong> {{item.body}}</span>
+    </div>
+</div>

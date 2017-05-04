@@ -1,0 +1,136 @@
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">ng2-alert-bar</h3>
+                    <nav class="nav nav-masthead">
+                        <a class="nav-link" href="#">npm</a>
+                        <a class="nav-link" href="#">GitHub</a>
+                        <a class="nav-link" target="_blank" href="https://nedimhozic.com/">Nedim Hozić</a>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cover-container">
+            <p class="lead">Demo</p>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input class="form-control" type="text" name="title" [(ngModel)]="title" />
+            </div>
+            <div class="form-group">
+                <label for="body">Body</label>
+                <input class="form-control" type="text" name="body" [(ngModel)]="body" />
+            </div>
+            <div class="col-md-3">
+                <div class="form-group row">
+                    <label for="timeout">Timeout</label>
+                    <input [disabled]="options.noTimeout" class="form-control" type="number" name="timeout" [(ngModel)]="options.duration" />
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group row">
+                    <div class="checkbox">
+                        <label><input type="checkbox" [(ngModel)]="options.noTimeout">No Timeout</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group row">
+                    <div class="checkbox">
+                        <label><input type="checkbox" [(ngModel)]="options.showClose">Show X</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group row">
+                    <div class="checkbox">
+                        <label><input type="checkbox" [(ngModel)]="options.closeOnTap">Close On Tap</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 colors-container">
+                <div class="row"><span>Text</span></div>
+                <div class="row text-container">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <color-picker [(ngModel)]="options.innerColor" [availableColors]="textColors"></color-picker><span> Color</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label>Position:</label>
+                            <select class="form-control text-placement-picker" [(ngModel)]="options.textPlacement">
+                                <option value="0">Left</option>
+                                <option value="1">Right</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 colors-container">
+                <div class="row"><span>Colors</span></div>
+                <div class="row text-container">
+                    <div class="col-md-3">
+                        <div class="form-group row">
+                            <color-picker [(ngModel)]="options.successColor" [availableColors]="availableColors"></color-picker><span> Success</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group row">
+                            <color-picker [(ngModel)]="options.errorColor" [availableColors]="availableColors"></color-picker><span> Error</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group row">
+                            <color-picker [(ngModel)]="options.warningColor" [availableColors]="availableColors"></color-picker><span> Warning</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group row">
+                            <color-picker [(ngModel)]="options.infoColor" [availableColors]="availableColors"></color-picker><span> Info</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button (click)="success()" class="btn btn-success">Success</button>
+                    <button (click)="error()" class="btn btn-danger">Error</button>
+                    <button (click)="warning()" class="btn btn-warning">Warning</button>
+                    <button (click)="info()" class="btn btn-info">Info</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<alert-bar [options]="options"></alert-bar>
+<!--<div class="container">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input class="form-control" type="text" name="title" [(ngModel)]="title" /><br/>
+    </div>
+    <div class="form-group">
+        <label for="body">Body</label>
+        <input class="form-control" type="text" name="body" [(ngModel)]="body" /><br/><br/>
+    </div>
+    <div class="form-group">
+        <label for="timeout">Timeout</label>
+        <input class="form-control" type="number" name="timeout" [(ngModel)]="timeout" />
+    </div>
+</div>
+<div class="container">
+    <button class="btn btn-default" (click)="success()">Success</button>
+    <button class="btn btn-default" (click)="error()">Error</button>
+    <button class="btn btn-default" (click)="warning()">Warning</button>
+    <button class="btn btn-default" (click)="info()">Info</button>
+</div>-->
+<!--<alert-bar [options]="options"></alert-bar>-->
