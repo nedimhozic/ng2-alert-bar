@@ -275,12 +275,14 @@ var AlertBarComponent = (function () {
     };
     AlertBarComponent.prototype.closeWithElement = function (element, index) {
         var _this = this;
-        this.renderer.setElementStyle(element, 'opacity', "0");
-        setTimeout(function () {
-            if (index > -1) {
-                _this.items.splice(index, 1);
-            }
-        }, 300);
+        if (index > -1) {
+            this.renderer.setElementStyle(element, 'opacity', "0");
+            setTimeout(function () {
+                if (index > -1) {
+                    _this.items.splice(index, 1);
+                }
+            }, 300);
+        }
     };
     AlertBarComponent.prototype.tapClose = function (event, item) {
         if (this.options.closeOnTap) {
