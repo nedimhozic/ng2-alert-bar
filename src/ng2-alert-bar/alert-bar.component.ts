@@ -103,12 +103,14 @@ export class AlertBarComponent {
     }
 
     closeWithElement(element: any, index: number) {
-        this.renderer.setElementStyle(element, 'opacity', "0");
-        setTimeout(() => {
-            if (index > -1) {
-                this.items.splice(index, 1);
-            }
-        }, 300);
+        if (index > -1) {
+            this.renderer.setElementStyle(element, 'opacity', "0");
+            setTimeout(() => {
+                if (index > -1) {
+                    this.items.splice(index, 1);
+                }
+            }, 300);
+        }
     }
 
     tapClose(event: any, item: Item) {
