@@ -71,7 +71,7 @@ innerColor: string = "#ffffff"; //Text color of alert-bar
 #Override options
 If you want to change predefind options, you can override all, or one of them like this:
 
-Placement:
+**Placement**:
 First, you need to import Placement enum from ng2-alert-bar:
 ```javascript
 import {AlertBar, AlertBarOptions, Placement} from 'ng2-alert-bar';
@@ -86,7 +86,7 @@ or inside component:
 this.options.placement = Placement.top;
 ```
 
-Text placement:
+**Text placement**:
 For text position, you need to import TextPlacement enum from ng2-alert-bar:
 ```javascript
 import {AlertBar, AlertBarOptions, TextPlacement} from 'ng2-alert-bar';
@@ -101,7 +101,7 @@ or inside component:
 this.options.textPlacement = TextPlacement.left;
 ```
 
-Colors:
+**Colors**:
 For colors for ribbon or text position:
 ```javascript
 public options: AlertBarOptions = new AlertBarOptions({
@@ -121,7 +121,7 @@ this.options.infoColor: "someHexColor";
 this.options.innerColor: "someHexColor";
 ```
 
-Duration:
+**Duration**:
 If you want to change duration in ms:
 ```javascript
 public options: AlertBarOptions = new AlertBarOptions({
@@ -133,7 +133,7 @@ or inside component:
 this.options.duration: 10000,
 ```
 
-Show or hide close button (x):
+**Show or hide close button (x)**:
 ```javascript
 public options: AlertBarOptions = new AlertBarOptions({
     showClose: false, //true for show, false for hide
@@ -144,7 +144,7 @@ or inside component:
 this.options.duration: false,
 ```
 
-Close on tap - Close alert-bar if user click on anywhere on ribbon:
+**Close on tap** - Close alert-bar if user click on anywhere on ribbon:
 ```javascript
 public options: AlertBarOptions = new AlertBarOptions({
     closeOnTap: true, 
@@ -155,7 +155,7 @@ or inside component:
 this.options.closeOnTap: true,
 ```
 
-Without timeout - Ignore 'duration' property and let user to close alert-bar:
+**Without timeout** - Ignore 'duration' property and let user to close alert-bar:
 ```javascript
 public options: AlertBarOptions = new AlertBarOptions({
     noTimeout: true, 
