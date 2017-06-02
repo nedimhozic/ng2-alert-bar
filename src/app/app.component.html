@@ -30,7 +30,7 @@
             <div class="col-md-3">
                 <div class="form-group row">
                     <label for="timeout">Timeout</label>
-                    <input [disabled]="options.noTimeout" class="form-control" type="number" name="timeout" [(ngModel)]="options.duration" />
+                    <input [disabled]="options.noTimeout" min="0" class="form-control" type="number" name="timeout" [(ngModel)]="options.duration" />
                 </div>
             </div>
             <div class="col-md-3">
@@ -54,15 +54,24 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 colors-container">
+            <div class="col-md-5">
+                <div class="form-group row">
+                    <label >Position:</label>
+                    <select class="form-control placement-picker" [(ngModel)]="options.placement">
+                                <option value="0">Bottom</option>
+                                <option value="1">Top</option>
+                            </select>
+                </div>
+            </div>
+            <div class="col-md-7 colors-container">
                 <div class="row"><span>Text</span></div>
                 <div class="row text-container">
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <div class="form-group row">
                             <color-picker [(ngModel)]="options.innerColor" [availableColors]="textColors"></color-picker><span> Color</span>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-9">
                         <div class="form-group row">
                             <label>Position:</label>
                             <select class="form-control text-placement-picker" [(ngModel)]="options.textPlacement">
@@ -113,24 +122,3 @@
 
 </div>
 <alert-bar [options]="options"></alert-bar>
-<!--<div class="container">
-    <div class="form-group">
-        <label for="title">Title</label>
-        <input class="form-control" type="text" name="title" [(ngModel)]="title" /><br/>
-    </div>
-    <div class="form-group">
-        <label for="body">Body</label>
-        <input class="form-control" type="text" name="body" [(ngModel)]="body" /><br/><br/>
-    </div>
-    <div class="form-group">
-        <label for="timeout">Timeout</label>
-        <input class="form-control" type="number" name="timeout" [(ngModel)]="timeout" />
-    </div>
-</div>
-<div class="container">
-    <button class="btn btn-default" (click)="success()">Success</button>
-    <button class="btn btn-default" (click)="error()">Error</button>
-    <button class="btn btn-default" (click)="warning()">Warning</button>
-    <button class="btn btn-default" (click)="info()">Info</button>
-</div>-->
-<!--<alert-bar [options]="options"></alert-bar>-->

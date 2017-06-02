@@ -10,15 +10,22 @@ a:hover {
 }
 
 .text-placement-picker {
-  width:35%!important;
+  width:40%!important;
   display:inline-block!important;
   margin-top: 4px;
 }
 
+.placement-picker {
+    width: 80%;
+    margin: 10px auto;
+}
+
 .text-container {
-  border: 1px solid;
+    border: 1px solid;
     border-radius: 5px;
     padding: 5px;
+    padding-top: 10px;
+    padding-left: 30px;
 }
 
 .checkbox {
